@@ -17,7 +17,10 @@ var storage = new GridFsStorage({
 
     return {
       bucketName: dbConfig.imgBucket,
-      filename: `${Date.now()}-bezkoder-${file.originalname}`
+      filename: `${Date.now()}-bezkoder-${file.originalname}`,
+      metadata: {
+        description: 'sample testing'
+      }
     };
   }
 });
